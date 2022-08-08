@@ -9,7 +9,6 @@ var CommandVersionTemplate = heredoc.Doc(`
 	  build date:   {{ .BuildDate }}
 	  commit:       {{ .Commit }}
 	  tag:          {{ .Tag }}
-	  go version:   {{ .GoVersion }}
 	  go compiler:  {{ .Compiler }}
 	  platform:     {{ .OS }}/{{ .Arch }}
 `)

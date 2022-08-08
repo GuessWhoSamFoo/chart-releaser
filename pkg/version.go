@@ -8,7 +8,6 @@ var (
 	Version   string
 	Commit    string
 	Tag       string
-	GoVersion string
 	BuildDate string
 )
 
@@ -17,7 +16,6 @@ type VersionInfo struct {
 	Version   string
 	Commit    string
 	Tag       string
-	GoVersion string
 	BuildDate string
 	Compiler  string
 	OS        string
@@ -32,7 +30,6 @@ func NewVersionInfo() VersionInfo {
 		Version:   Version,
 		Commit:    Commit,
 		Tag:       Tag,
-		GoVersion: GoVersion,
 		BuildDate: BuildDate,
 		Compiler:  runtime.Compiler,
 		OS:        runtime.GOOS,

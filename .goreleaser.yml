@@ -39,14 +39,14 @@ builds:
     goarch:
       - amd64
 dockers:
-  -
+  - use: docker
     goos: linux
     goarch: amd64
     image_templates:
-      - 'vapor-ware/chart-releaser:{{ .Tag }}'
-      - 'vapor-ware/chart-releaser:{{ .Major }}'
-      - 'vapor-ware/chart-releaser:{{ .Major }}.{{ .Minor }}'
-      - 'vapor-ware/chart-releaser:latest'
+      - 'vaporio/chart-releaser:{{ .Tag }}'
+      - 'vaporio/chart-releaser:{{ .Major }}'
+      - 'vaporio/chart-releaser:{{ .Major }}.{{ .Minor }}'
+      - 'vaporio/chart-releaser:latest'
     build_flag_templates:
       - '--label=org.label-schema.version={{ .Version }}'
       - '--label=org.label-schema.build-date={{ .Date }}'

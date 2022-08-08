@@ -15,7 +15,6 @@ func TestNewVersionInfo(t *testing.T) {
 	assert.Equal(t, "", info.Version)
 	assert.Equal(t, "", info.Commit)
 	assert.Equal(t, "", info.Tag)
-	assert.Equal(t, "", info.GoVersion)
 	assert.Equal(t, "", info.BuildDate)
 	assert.Equal(t, runtime.Compiler, info.Compiler)
 	assert.Equal(t, runtime.GOOS, info.OS)

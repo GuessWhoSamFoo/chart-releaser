@@ -7,10 +7,10 @@ import (
 	"text/template"
 
 	"github.com/MakeNowJust/heredoc"
-	"github.com/vapor-ware/chart-releaser/pkg"
-	"github.com/vapor-ware/chart-releaser/pkg/templates"
 	"github.com/spf13/cobra"
 	"github.com/tcnksm/go-latest"
+	"github.com/vapor-ware/chart-releaser/pkg"
+	"github.com/vapor-ware/chart-releaser/pkg/templates"
 )
 
 type versionCmd struct {
@@ -44,7 +44,7 @@ func newVersionCommand() *versionCmd {
 
 			if root.checkLatest {
 				tag := &latest.GithubTag{
-					Owner:      "edaniszewski",
+					Owner:      "vapor-ware",
 					Repository: "chart-releaser",
 				}
 

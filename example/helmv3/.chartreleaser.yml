@@ -1,11 +1,11 @@
 # .chartreleaser.yaml is the configuration file for chart-releaser, a CI tool
 # to update Helm Charts on application release. See the documentation at
-# https://github.com/edaniszewski/chart-releaser
+# https://github.com/vapor-ware/chart-releaser
 
 version: v1
 chart:
   name: helmv3-chart
-  repo: github.com/edaniszewski/charts-test
+  repo: github.com/vapor-ware/charts-test
   path: helm3
 publish:
   pr:

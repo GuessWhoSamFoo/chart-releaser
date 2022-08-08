@@ -14,17 +14,17 @@ Chart to update the appVersion and Chart version.
 
 ## Getting Started
 
-### Getting
-
-#### Latest
+### Requirements
 
 The latest release is available from the [releases](https://github.com/vapor-ware/chart-releaser/releases)
 page. All tags generate a release with pre-compiled binaries attached as assets.
 
+A local installation of git is and a `GITHUB_TOKEN` set as an environment variable is required.
+
 ### Running
 
 `chart-releaser` can be run from the command line with no argument or with the `--help` flag
-to print usage info. The main entrypoint for kicking of a Chart update is through the `chart-releaese update`
+to print usage info. The main entrypoint for kicking of a Chart update is through the `chart-releaser update`
 command.
 
 It looks for a `.chartreleaser.yml` configuration file in the directory which it is run out of
@@ -34,6 +34,17 @@ and executes an update based on those config options.
 chart-releaser update
 ```
 
+### Docker
+
+```
+docker pull vaporio/chart-releaser
+```
+
+Example usage by mounting the path of a repo with `.chartreleaser.yml` to the contain:
+
+```
+docker run -e GITHUB_TOKEN=$GITHUB_TOKEN --rm -v $(pwd):/data test update --dry-run
+```
 
 ## Configuring
 
